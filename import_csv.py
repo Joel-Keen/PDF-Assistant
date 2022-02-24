@@ -3,10 +3,6 @@ from tkinter import *
 from tkinter.ttk import *
 from tkinter import filedialog
 
-## ------------- Global Variables
-#csvFileName = "pdfTools.csv"
-#xmlFileName = "pdfTemplate.xml"
-#outputDirectoryName = "pdfOutput\\"
 ## ------------- Functions
 
 def browseXmlFile():
@@ -52,7 +48,7 @@ root = Tk()
 root.title("PDF Assistant")
 root.geometry('750x750')
 
-label = Label(root, text = "Please select a XML template, CSV data file and output directory").pack() # Test
+label = Label(root, text = "Please select a XML template, CSV data file and output directory").pack()
 
 browseXmlBtn = Button(root, text = "Browse XML files", command = browseXmlFile).pack()
 
@@ -77,9 +73,3 @@ labelCsv2Xml.pack()
 cancelBtn = Button(root, text = 'Cancel', command = root.destroy).pack(side = 'bottom')
 
 root.mainloop()
-
-# pdfToolsPath = "pdfTools.csv"
-# pdfTemplatePath = "pdfTemplate.xml"
-# pdfOutputPath = "pdfOutput\\"
-
-# convertCsv2Xml("pdfTools.csv", "pdfTemplate.xml", "pdfOutput\\")
